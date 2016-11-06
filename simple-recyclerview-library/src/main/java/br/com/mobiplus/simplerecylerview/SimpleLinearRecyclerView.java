@@ -12,17 +12,17 @@ import br.com.mobiplus.simplerecylerview.adapter.OnItemClickListener;
 /**
  * Created by luisfernandez on 2/10/16.
  */
-public class CustomLinearRecyclerView extends LinearRecyclerView {
+public class SimpleLinearRecyclerView extends LinearRecyclerView {
 
-    public CustomLinearRecyclerView(Context context) {
+    public SimpleLinearRecyclerView(Context context) {
         super(context);
     }
 
-    public CustomLinearRecyclerView(Context context, AttributeSet attrs) {
+    public SimpleLinearRecyclerView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public CustomLinearRecyclerView(Context context, AttributeSet attrs, int defStyle) {
+    public SimpleLinearRecyclerView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 
