@@ -8,7 +8,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.mobiplus.simplerecyclerview.sample.model.Event;
+import br.com.mobiplus.simplerecyclerview.sample.model.Stadium;
 import br.com.mobiplus.simplerecylerview.SimpleLinearRecyclerView;
 import br.com.mobiplus.simplerecylerview.adapter.OnItemClickListener;
 
@@ -19,16 +19,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_adapter);
 
-        List<Event> eventList = new ArrayList<>();
-        eventList.add(new Event("http://cdn.guiasrbs.com.br/uXaFhMfKw_j67sgNnYmAG2bnTrk=/620x330/smart/www.guiadasemana.com.br/system/pictures/2014/6/115261/cropped/citibank-hall.png", "30/03/2016", "Roupa Nova - Citibank Hall", 90.00d, "22:30"));
-        eventList.add(new Event("http://imgs-srzd.s3.amazonaws.com/srzd/upload/b/a/barra_music_01_620.jpg", "01/04/2016", "Anitta - Barra Music", 45.00d, "23:00"));
-        eventList.add(new Event("http://www.vivorio.com.br/wp-content/uploads/vivo_rio1.jpg", "02/04/2016", "Sorriso Maroto - Vivo Rio", 60.00d, "21:00"));
+        List<Stadium> stadiumList = new ArrayList<>();
+        stadiumList.add(new Stadium("Stanford Bridge", "http://www.campeoesdofutebol.com.br/estadios/stamford_bridge_stadium.jpg", 65000, "19/03/1940"));
+        stadiumList.add(new Stadium("Emirates Stadium", "http://www.stadiumguide.com/wp-content/gallery/emirates/emirates1.jpg", 96000, "20/10/1899"));
+        stadiumList.add(new Stadium("Maracanã (Mario Filho)", "http://knoow.net/wp-content/uploads/2016/01/maracana2.jpg", 78838, "16/06/1950"));
+        stadiumList.add(new Stadium("San Siro", "http://www.stadiumguide.com/wp-content/gallery/sansiro/sansiro10.jpg", 80018, "19/09/1926"));
+        stadiumList.add(new Stadium("Old Traford", "http://www.stadiumguide.com/wp-content/uploads/oldtrafford_front.jpg", 75811, "02/02/1910"));
+        stadiumList.add(new Stadium("Alianz Arena", "http://www.stadiumguide.com/wp-content/uploads/allianzarena_front.jpg", 75000, "06/04/2005"));
+        stadiumList.add(new Stadium("Camp Nou", "http://www.stadiumguide.com/wp-content/uploads/campnou_front-2.jpg", 99354, "12/09/1957"));
+        stadiumList.add(new Stadium("Juventus Stadium", "http://www.stadiumguide.com/wp-content/uploads/juventus_front1.jpg", 41000, "08/09/2011"));
 
+        stadiumList.addAll(stadiumList);
         SimpleLinearRecyclerView recyclerView = (SimpleLinearRecyclerView) findViewById(R.id.recyclerView);
-        recyclerView.setCollection(eventList, new OnItemClickListener<Event>() {
+        recyclerView.setCollection(stadiumList, new OnItemClickListener<Stadium>() {
             @Override
-            public void onItemClick(Event event, @IdRes int resId) {
-                Toast.makeText(getApplicationContext(), "Clicked item: " + event.getDescription(), Toast.LENGTH_LONG).show();
+            public void onItemClick(Stadium stadium, @IdRes int resId) {
+                Toast.makeText(getApplicationContext(), "Clicked item: " + stadium.getName(), Toast.LENGTH_LONG).show();
             }
         });
     }
