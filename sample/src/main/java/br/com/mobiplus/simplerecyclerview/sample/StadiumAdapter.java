@@ -38,9 +38,9 @@ public class StadiumAdapter extends RecyclerView.Adapter<StadiumAdapter.StadiumV
         Stadium stadium = this.getItem(position);
 
         holder.textName.setText(stadium.getName());
-        holder.textCapacity.setText(stadium.getCapacity());
+        holder.textCapacity.setText(String.valueOf(stadium.getCapacity()));
         holder.textFoundationDate.setText(stadium.getFoundation());
-        holder.textLikeCount.setText(stadium.getLikes());
+        holder.textLikeCount.setText(String.valueOf(stadium.getLikes()));
     }
 
     private Stadium getItem(int position) {
