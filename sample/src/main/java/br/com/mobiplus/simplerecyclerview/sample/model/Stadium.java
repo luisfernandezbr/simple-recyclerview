@@ -15,47 +15,38 @@ public class Stadium {
     private String iconUrl;
     private int capacity;
     private String foundation;
+    private int likes;
 
-    public Stadium(String name, String iconUrl, int capacity, String foundation) {
+    public Stadium(String name, String iconUrl, int capacity, String foundation, int likes) {
         this.name = name;
         this.iconUrl = iconUrl;
         this.capacity = capacity;
         this.foundation = foundation;
+        this.likes = likes;
     }
 
-    @TextAdapter(resId = R.id.eventText_1)
+    @TextAdapter(resId = R.id.text_1)
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @ImageAdapter(resId = R.id.eventImage)
+    @ImageAdapter(resId = R.id.imageIcon)
     public String getIconUrl() {
         return iconUrl;
     }
 
-    public void setIconUrl(String iconUrl) {
-        this.iconUrl = iconUrl;
-    }
-
-    @TextAdapter(resId = R.id.eventText_2)
+    @TextAdapter(resId = R.id.text_2)
     public int getCapacity() {
         return capacity;
     }
 
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
-
-    @TextAdapter(resId = R.id.eventText_3)
+    @TextAdapter(resId = R.id.text_3)
     public String getFoundation() {
         return foundation;
     }
 
-    public void setFoundation(String foundation) {
-        this.foundation = foundation;
+    @TextAdapter(resId = R.id.text_4)
+    public int getLikes() {
+        return likes;
     }
 }
