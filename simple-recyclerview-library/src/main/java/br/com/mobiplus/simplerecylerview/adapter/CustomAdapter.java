@@ -31,6 +31,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     private int[] mArrayClickableResIds;
     private List mList;
     private OnItemClickListener mOnItemClickListener;
+    private OnPreloadContent onPreloadContent;
 
     public CustomAdapter(Context context, List list, OnItemClickListener onItemClickListener) {
         this.mContext = context;
@@ -57,6 +58,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     @Override
     public int getItemCount() {
         return mList.size();
+    }
+
+    public void addOnPreloadContent(OnPreloadContent onPreloadContent) {
+        this.onPreloadContent = onPreloadContent;
     }
 
     public class CustomViewHolder extends RecyclerView.ViewHolder {
@@ -113,11 +118,17 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
                             String textContent = String.valueOf(declaredMethod.invoke(mCurrentItem));
                             TextView textView = (TextView) itemView.findViewById(resId);
 
-                            if (!TextUtils.isEmpty(typeface)) {
-                                TypefaceUtil.defineTextStyle(mContext, textView, typeface);
-                            }
+                            if (onPreloadContent != null) {
+                                boolean handled = onPreloadContent.onPreLoadContent(textContent, textView);
 
-                            textView.setText(textContent); ;
+                                if (!handled) {
+                                    if (!TextUtils.isEmpty(typeface)) {
+                                        TypefaceUtil.defineTextStyle(mContext, textView, typeface);
+                                    }
+
+                                    textView.setText(textContent);
+                                }
+                            }
                         } catch (IllegalAccessException e) {
                             e.printStackTrace();
                         } catch (InvocationTargetException e) {
