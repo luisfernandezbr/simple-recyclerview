@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">simple-recyclerview</string>
+
+    <plurals name="text_like_plural">
+        <item quantity="zero">No like</item>
+        <item quantity="one">%d like</item>
+        <item quantity="other">%d likes</item>
+    </plurals>
 </resources>
