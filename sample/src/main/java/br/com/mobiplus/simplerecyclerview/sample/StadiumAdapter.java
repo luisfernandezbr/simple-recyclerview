@@ -1,6 +1,7 @@
 package br.com.mobiplus.simplerecyclerview.sample;
 
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -16,7 +17,6 @@ import br.com.mobiplus.simplerecyclerview.sample.model.Stadium;
 
 public class StadiumAdapter extends RecyclerView.Adapter<StadiumAdapter.StadiumViewHolder> {
 
-
     private List<Stadium> stadiumList;
 
     public StadiumAdapter(List<Stadium> stadiumList) {
@@ -25,7 +25,10 @@ public class StadiumAdapter extends RecyclerView.Adapter<StadiumAdapter.StadiumV
 
     @Override
     public StadiumViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return null;
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        View view = inflater.inflate(R.layout.item_custom_adapter_event_layout, parent, false);
+
+        return new StadiumViewHolder(view);
     }
 
     @Override
