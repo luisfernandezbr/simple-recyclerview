@@ -1,51 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-    >
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
 
     <ImageView
-        android:id="@+id/eventImage"
+        android:id="@+id/imageIcon"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_centerVertical="true"
         android:layout_marginRight="@dimen/activity_vertical_margin"
-        android:scaleType="centerCrop"
-        android:background="@drawable/placeholder"/>
+        android:background="@drawable/placeholder"
+        android:scaleType="centerCrop"/>
 
-    <TextView
-        android:id="@+id/eventText_1"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/eventImage"
-        android:layout_toEndOf="@id/eventImage"
-        android:layout_toRightOf="@id/eventImage"
-        android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceListItem"/>
+        android:layout_alignTop="@id/imageIcon"
+        android:layout_toEndOf="@id/imageIcon"
+        android:layout_toRightOf="@id/imageIcon"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/eventText_2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/eventText_1"
-        android:layout_toEndOf="@id/eventImage"
-        android:layout_toRightOf="@id/eventImage"
-        android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceSmall"/>
+        <TextView
+            android:id="@+id/text_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceListItem"/>
 
-    <TextView
-        android:id="@+id/eventText_3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/eventImage"
-        android:layout_below="@id/eventText_2"
-        android:layout_toEndOf="@id/eventImage"
-        android:layout_toRightOf="@id/eventImage"
-        android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceSmall"/>
+        <TextView
+            android:id="@+id/text_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <TextView
+            android:id="@+id/text_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <TextView
+            android:id="@+id/text_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+    </LinearLayout>
 
 </RelativeLayout>
