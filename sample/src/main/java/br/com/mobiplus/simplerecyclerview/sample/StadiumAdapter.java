@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import br.com.mobiplus.simplerecyclerview.sample.model.Stadium;
@@ -33,7 +35,16 @@ public class StadiumAdapter extends RecyclerView.Adapter<StadiumAdapter.StadiumV
 
     @Override
     public void onBindViewHolder(StadiumViewHolder holder, int position) {
+        Stadium stadium = this.getItem(position);
 
+        holder.textName.setText(stadium.getName());
+        holder.textCapacity.setText(stadium.getCapacity());
+        holder.textFoundationDate.setText(stadium.getFoundation());
+        holder.textLikeCount.setText(stadium.getLikes());
+    }
+
+    private Stadium getItem(int position) {
+        return stadiumList.get(position);
     }
 
     @Override
@@ -43,11 +54,11 @@ public class StadiumAdapter extends RecyclerView.Adapter<StadiumAdapter.StadiumV
 
     public static class StadiumViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView textName;
-        private TextView textCapacity;
-        private TextView textFoundationDate;
-        private TextView textLikeCount;
-        private ImageView imageStadiumPhoto;
+        TextView textName;
+        TextView textCapacity;
+        TextView textFoundationDate;
+        TextView textLikeCount;
+        ImageView imageStadiumPhoto;
 
         public StadiumViewHolder(View itemView) {
             super(itemView);
