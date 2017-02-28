@@ -1,6 +1,7 @@
 package br.com.mobiplus.simplerecyclerview.sample;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,7 +44,10 @@ public class StadiumAdapter extends RecyclerView.Adapter<StadiumAdapter.StadiumV
         holder.textName.setText(stadium.getName());
         holder.textCapacity.setText(String.valueOf(stadium.getCapacity()));
         holder.textFoundationDate.setText(stadium.getFoundation());
-        holder.textLikeCount.setText(String.valueOf(stadium.getLikes()));
+
+        Resources res = context.getResources();
+        String quantityString = res.getQuantityString(R.plurals.text_like_plural, stadium.getLikes(), stadium.getLikes());
+        holder.textLikeCount.setText(quantityString);
 
         Picasso.with(context).load(stadium.getIconUrl()).into(holder.imageStadiumPhoto);
     }
