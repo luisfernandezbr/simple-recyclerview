@@ -29,7 +29,7 @@ public class NormalRecyclerViewActivity extends AppCompatActivity  implements Mo
 
     @Override
     public void onLoadData(List<Stadium> stadiumList) {
-        StadiumAdapter adapter = new StadiumAdapter(stadiumList);
+        StadiumAdapter adapter = new StadiumAdapter(this, stadiumList);
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

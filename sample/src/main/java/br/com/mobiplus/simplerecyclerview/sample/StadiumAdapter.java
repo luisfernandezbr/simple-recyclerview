@@ -1,5 +1,6 @@
 package br.com.mobiplus.simplerecyclerview.sample;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,9 +20,11 @@ import br.com.mobiplus.simplerecyclerview.sample.model.Stadium;
 
 public class StadiumAdapter extends RecyclerView.Adapter<StadiumAdapter.StadiumViewHolder> {
 
+    private Context context;
     private List<Stadium> stadiumList;
 
-    public StadiumAdapter(List<Stadium> stadiumList) {
+    public StadiumAdapter(Context context, List<Stadium> stadiumList) {
+        this.context = context;
         this.stadiumList = stadiumList;
     }
 
@@ -41,6 +44,8 @@ public class StadiumAdapter extends RecyclerView.Adapter<StadiumAdapter.StadiumV
         holder.textCapacity.setText(String.valueOf(stadium.getCapacity()));
         holder.textFoundationDate.setText(stadium.getFoundation());
         holder.textLikeCount.setText(String.valueOf(stadium.getLikes()));
+
+        Picasso.with(context).load(stadium.getIconUrl()).into(holder.imageStadiumPhoto);
     }
 
     private Stadium getItem(int position) {
