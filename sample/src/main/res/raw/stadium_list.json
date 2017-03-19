@@ -1,0 +1,58 @@
+[
+  {
+    "capacity":65000,
+    "foundation":"19/03/1940",
+    "iconUrl":"http://www.campeoesdofutebol.com.br/estadios/stamford_bridge_stadium.jpg",
+    "likes":12394,
+    "name":"Stanford Bridge"
+  },
+  {
+    "capacity":96000,
+    "foundation":"20/10/1899",
+    "iconUrl":"http://www.stadiumguide.com/wp-content/gallery/emirates/emirates1.jpg",
+    "likes":1,
+    "name":"Emirates Stadium"
+  },
+  {
+    "capacity":78838,
+    "foundation":"16/06/1950",
+    "iconUrl":"http://knoow.net/wp-content/uploads/2016/01/maracana2.jpg",
+    "likes":0,
+    "name":"Maracanã (Mario Filho)"
+  },
+  {
+    "capacity":80018,
+    "foundation":"19/09/1926",
+    "iconUrl":"http://www.stadiumguide.com/wp-content/gallery/sansiro/sansiro10.jpg",
+    "likes":4722,
+    "name":"San Siro"
+  },
+  {
+    "capacity":75811,
+    "foundation":"02/02/1910",
+    "iconUrl":"http://www.stadiumguide.com/wp-content/uploads/oldtrafford_front.jpg",
+    "likes":3494,
+    "name":"Old Traford"
+  },
+  {
+    "capacity":75000,
+    "foundation":"06/04/2005",
+    "iconUrl":"http://www.stadiumguide.com/wp-content/uploads/allianzarena_front.jpg",
+    "likes":93645,
+    "name":"Alianz Arena"
+  },
+  {
+    "capacity":99354,
+    "foundation":"12/09/1957",
+    "iconUrl":"http://www.stadiumguide.com/wp-content/uploads/campnou_front-2.jpg",
+    "likes":65284,
+    "name":"Camp Nou"
+  },
+  {
+    "capacity":41040,
+    "foundation":"08/09/2011",
+    "iconUrl":"http://www.stadiumguide.com/wp-content/uploads/juventus_front1.jpg",
+    "likes":1287,
+    "name":"Juventus Stadium"
+  }
+]

@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements MockService.DataC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_adapter);
 
-        mockService = new MockService();
+        mockService = new MockService(getApplicationContext());
 
         this.loadData();
     }

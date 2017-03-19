@@ -18,7 +18,7 @@ public class NormalRecyclerViewActivity extends AppCompatActivity  implements Mo
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_normal_recycler_view);
 
-        mockService = new MockService();
+        mockService = new MockService(getApplicationContext());
 
         this.loadData();
     }
