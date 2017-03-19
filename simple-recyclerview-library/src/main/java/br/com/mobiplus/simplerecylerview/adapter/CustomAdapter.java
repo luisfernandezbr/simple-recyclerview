@@ -118,16 +118,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
                             String textContent = String.valueOf(declaredMethod.invoke(mCurrentItem));
                             TextView textView = (TextView) itemView.findViewById(resId);
 
-                            if (onPreloadContent != null) {
-                                boolean handled = onPreloadContent.onPreLoadContent(textContent, textView);
-
-                                if (!handled) {
-                                    if (!TextUtils.isEmpty(typeface)) {
-                                        TypefaceUtil.defineTextStyle(mContext, textView, typeface);
-                                    }
-
-                                    textView.setText(textContent);
+                            if (onPreloadContent == null || !onPreloadContent.onPreLoadContent(textContent, textView)) {
+                                if (!TextUtils.isEmpty(typeface)) {
+                                    TypefaceUtil.defineTextStyle(mContext, textView, typeface);
                                 }
+
+                                textView.setText(textContent);
                             }
                         } catch (IllegalAccessException e) {
                             e.printStackTrace();
