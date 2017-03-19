@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements MockService.DataC
             @Override
             public boolean onPreLoadContent(String content, TextView textView) {
 
-                if (R.id.text_4 == textView.getId()) {
+                if (R.id.textLikes == textView.getId()) {
                     Resources res = getResources();
 
                     String quantityString = res.getQuantityString(R.plurals.text_like_plural, Integer.parseInt(content), Integer.parseInt(content));
