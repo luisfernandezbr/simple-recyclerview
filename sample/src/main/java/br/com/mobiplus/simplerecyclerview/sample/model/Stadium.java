@@ -5,9 +5,6 @@ import br.com.mobiplus.simplerecylerview.annotations.ImageAdapter;
 import br.com.mobiplus.simplerecylerview.annotations.LayoutAdapter;
 import br.com.mobiplus.simplerecylerview.annotations.TextAdapter;
 
-/**
- * Created by luisfernandez on 2/10/16.
- */
 @LayoutAdapter(layoutResId = R.layout.item_custom_adapter_event_layout)
 public class Stadium {
 
@@ -25,7 +22,7 @@ public class Stadium {
         this.likes = likes;
     }
 
-    @TextAdapter(resId = R.id.text_1)
+    @TextAdapter(resId = R.id.textName)
     public String getName() {
         return name;
     }
@@ -35,17 +32,17 @@ public class Stadium {
         return iconUrl;
     }
 
-    @TextAdapter(resId = R.id.text_2)
+    @TextAdapter(resId = R.id.textCapacity)
     public int getCapacity() {
         return capacity;
     }
 
-    @TextAdapter(resId = R.id.text_3)
+    @TextAdapter(resId = R.id.textFoundationDate)
     public String getFoundation() {
         return foundation;
     }
 
-    @TextAdapter(resId = R.id.text_4)
+    @TextAdapter(resId = R.id.textLikes)
     public int getLikes() {
         return likes;
     }

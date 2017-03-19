@@ -26,28 +26,28 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/text_1"
+            android:id="@+id/textName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Medium Text"
             android:textAppearance="?android:attr/textAppearanceListItem"/>
 
         <TextView
-            android:id="@+id/text_2"
+            android:id="@+id/textCapacity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Medium Text"
             android:textAppearance="?android:attr/textAppearanceSmall"/>
 
         <TextView
-            android:id="@+id/text_3"
+            android:id="@+id/textFoundationDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Medium Text"
             android:textAppearance="?android:attr/textAppearanceSmall"/>
 
         <TextView
-            android:id="@+id/text_4"
+            android:id="@+id/textLikes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Medium Text"
