@@ -15,10 +15,7 @@ import java.util.List;
 
 import br.com.mobiplus.simplerecyclerview.sample.model.Stadium;
 
-/**
- * Created by luis.fernandez on 2/28/17.
- */
-
+@SuppressWarnings("WeakerAccess")
 public class StadiumAdapter extends RecyclerView.Adapter<StadiumAdapter.StadiumViewHolder> {
 
     private Context context;
@@ -52,13 +49,13 @@ public class StadiumAdapter extends RecyclerView.Adapter<StadiumAdapter.StadiumV
         Picasso.with(context).load(stadium.getIconUrl()).into(holder.imageStadiumPhoto);
     }
 
-    private Stadium getItem(int position) {
-        return stadiumList.get(position);
-    }
-
     @Override
     public int getItemCount() {
         return stadiumList.size();
+    }
+
+    private Stadium getItem(int position) {
+        return stadiumList.get(position);
     }
 
     public static class StadiumViewHolder extends RecyclerView.ViewHolder {
@@ -72,10 +69,10 @@ public class StadiumAdapter extends RecyclerView.Adapter<StadiumAdapter.StadiumV
         public StadiumViewHolder(View itemView) {
             super(itemView);
 
-            this.textName = (TextView) itemView.findViewById(R.id.text_1);
-            this.textCapacity = (TextView) itemView.findViewById(R.id.text_2);
-            this.textFoundationDate = (TextView) itemView.findViewById(R.id.text_3);
-            this.textLikeCount = (TextView) itemView.findViewById(R.id.text_4);
+            this.textName = (TextView) itemView.findViewById(R.id.textName);
+            this.textCapacity = (TextView) itemView.findViewById(R.id.textCapacity);
+            this.textFoundationDate = (TextView) itemView.findViewById(R.id.textFoundationDate);
+            this.textLikeCount = (TextView) itemView.findViewById(R.id.textLikes);
             this.imageStadiumPhoto = (ImageView) itemView.findViewById(R.id.imageIcon);
         }
     }
