@@ -9,7 +9,7 @@ import java.util.List;
 
 import br.com.mobiplus.simplerecyclerview.sample.model.Stadium;
 
-public class NormalRecyclerViewActivity extends AppCompatActivity  implements MockService.DataCallback<List<Stadium>> {
+public class NormalRecyclerViewActivity extends AppCompatActivity implements MockService.DataCallback<List<Stadium>> {
 
     private MockService mockService;
 

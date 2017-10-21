@@ -14,14 +14,6 @@ public class Stadium {
     private String foundation;
     private int likes;
 
-    public Stadium(String name, String iconUrl, int capacity, String foundation, int likes) {
-        this.name = name;
-        this.iconUrl = iconUrl;
-        this.capacity = capacity;
-        this.foundation = foundation;
-        this.likes = likes;
-    }
-
     @TextAdapter(resId = R.id.textName)
     public String getName() {
         return name;
@@ -45,5 +37,25 @@ public class Stadium {
     @TextAdapter(resId = R.id.textLikes)
     public int getLikes() {
         return likes;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setIconUrl(String iconUrl) {
+        this.iconUrl = iconUrl;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public void setFoundation(String foundation) {
+        this.foundation = foundation;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
     }
 }

@@ -46,7 +46,7 @@ public class MockService {
                     stadiumList = this.getStadiumListFrom(jsonFromRaw);
 
                 } catch (IOException e) {
-                    Log.e(TAG, "Error executing doInBackground(). ", e);;
+                    Log.e(TAG, "Error executing doInBackground(). ", e);
                 }
 
                 return stadiumList;
