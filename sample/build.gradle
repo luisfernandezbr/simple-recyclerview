@@ -23,8 +23,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.google.code.gson:gson:2.8.0'
-    implementation 'br.com.mobiplus:simple-recyclerview-library:0.1.0'
-
+    implementation 'br.com.mobiplus:simple-recyclerview-library:0.1.3'
 
     //implementation project(':simple-recyclerview-library')
 }
