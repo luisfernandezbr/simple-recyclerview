@@ -51,7 +51,9 @@ That's it.
 ## Configuring
 
 /build.gradle
+
 `repositories { maven { url  "https://dl.bintray.com/luis82fernandez/libraries" }}`
 
 /[your_app]/build.gradle
+
 `implementation 'br.com.mobiplus:simple-recyclerview-library:[last_version]'`
