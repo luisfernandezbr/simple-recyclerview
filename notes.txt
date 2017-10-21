@@ -1,0 +1,3 @@
+https://bintray.com
+https://inthecheesefactory.com/blog/how-to-upload-library-to-jcenter-maven-central-as-dependency/en
+https://github.com/danielemaddaluno/gradle-jcenter-publish
