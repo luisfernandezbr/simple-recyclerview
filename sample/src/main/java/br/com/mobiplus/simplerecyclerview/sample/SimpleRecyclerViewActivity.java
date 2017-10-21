@@ -31,7 +31,7 @@ public class SimpleRecyclerViewActivity extends AppCompatActivity implements Moc
 
     @Override
     public void onLoadData(List<Stadium> stadiumList) {
-        SimpleLinearRecyclerView recyclerView = (SimpleLinearRecyclerView) findViewById(R.id.recyclerView);
+        SimpleLinearRecyclerView recyclerView = this.findViewById(R.id.recyclerView);
         recyclerView.setCollection(stadiumList, new OnItemClickListener<Stadium>() {
             @Override
             public void onItemClick(Stadium stadium, @IdRes int resId) {
