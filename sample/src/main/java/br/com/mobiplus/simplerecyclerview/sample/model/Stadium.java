@@ -1,5 +1,6 @@
 package br.com.mobiplus.simplerecyclerview.sample.model;
 
+import br.com.mobiplus.simplerecyclerview.sample.FontConstants;
 import br.com.mobiplus.simplerecyclerview.sample.R;
 import br.com.mobiplus.simplerecylerview.annotations.ImageAdapter;
 import br.com.mobiplus.simplerecylerview.annotations.LayoutAdapter;
@@ -24,17 +25,17 @@ public class Stadium {
         return iconUrl;
     }
 
-    @TextAdapter(resId = R.id.textCapacity)
+    @TextAdapter(resId = R.id.textCapacity, typeface = FontConstants.FONT_ROBOTO_LIGHT)
     public int getCapacity() {
         return capacity;
     }
 
-    @TextAdapter(resId = R.id.textFoundationDate)
+    @TextAdapter(resId = R.id.textFoundationDate, typeface = FontConstants.FONT_ROBOTO_LIGHT)
     public String getFoundation() {
         return foundation;
     }
 
-    @TextAdapter(resId = R.id.textLikes)
+    @TextAdapter(resId = R.id.textLikes, typeface = FontConstants.FONT_ROBOTO_LIGHT)
     public int getLikes() {
         return likes;
     }
